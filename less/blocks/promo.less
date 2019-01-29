@@ -1,0 +1,22 @@
+.promo {
+  position: relative;
+  z-index: 2;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  color: #fff;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15,25,37,0.9);
+  }
+}

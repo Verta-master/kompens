@@ -84,14 +84,14 @@
   </header>
   
   <main>
-    <section class="promo">
+    <section class="promo" style="background-image: url(img/images/bg-4.jpg);" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
       <div class="wrapper">
         <h1>Большой выбор компенсаторов</h1>
-        <a href="#" class="promo__btn">Перейти в каталог</a>
+        <a href="#" class="btn btn--frame">Перейти в каталог</a>
       </div>
     </section>
     
-    <section class="product">
+    <section class="product wrapper">
       <p class="title-top"><span>Компенсаторы</span></p>
       <p class="title">Наша продукция</p>
       <ul class="product__list">
@@ -452,6 +452,7 @@
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.paroller.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
 
   <!-- Slider -->
@@ -467,6 +468,11 @@
       slidesPerView: 'auto',
       spaceBetween: 30,
     });
+  </script>
+  
+  <!-- Parallax -->
+  <script>
+    $("[data-paroller-factor]").paroller();
   </script>
 </body>
 </html>
