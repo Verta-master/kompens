@@ -1,0 +1,21 @@
+.btn {
+  width: 200px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: @blue;
+  border-radius: 30px;
+  border: 1px solid @blue;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    background-color: #fff;
+    .transition();
+  }
+}
