@@ -1,0 +1,31 @@
+.title {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title-top {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: @blue;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  
+  span {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: ~"calc(100% + 10px)";
+      transform: translateY(-50%);
+      width: 100px;
+      height: 1px;
+      background-color: @blue;
+    }
+  }
+}
