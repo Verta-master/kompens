@@ -5,3 +5,46 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.more {
+  display: block;
+  text-align: right;
+  color: @blue;
+  text-decoration: underline;
+  
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  position: relative;
+  .reset();
+  width: 100%;
+  padding: 40px;
+  border: 15px solid rgba(39, 47, 58, 0.15);
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 36px;
+    background-color: #fff;
+    background-image: url(../img/icons/quote.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 36px;
+  }
+  &::before {
+    left: 10px;
+    top: -30px;
+  }
+  &::after {
+    right: 10px;
+    bottom: -30px;
+    transform: rotate(180deg);
+  }
+}
