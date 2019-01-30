@@ -485,6 +485,47 @@ h1 {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.btn--white {
+  color: #0067da;
+  border-color: #fff;
+  background-color: #fff;
+}
+.btn--white:hover,
+.btn--white:active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.title {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.title-top {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0067da;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.title-top span {
+  position: relative;
+}
+.title-top span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100px;
+  height: 1px;
+  background-color: #0067da;
+}
 .social {
   margin: 0;
   padding: 0;
@@ -632,7 +673,7 @@ h1 {
   margin-left: 30px;
 }
 .search:hover .search__input {
-  height: 36px;
+  width: 850px;
   opacity: 1;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
@@ -640,10 +681,10 @@ h1 {
 .search__input {
   position: absolute;
   z-index: 10;
-  top: 100%;
-  right: 0;
-  width: 150px;
-  height: 0;
+  top: 0;
+  right: 110%;
+  width: 0;
+  height: 36px;
   opacity: 0;
   padding: 0 10px;
   font-size: 14px;
@@ -681,4 +722,134 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: rgba(15, 25, 37, 0.9);
+}
+.product {
+  padding-top: 80px;
+  padding-bottom: 45px;
+}
+.product__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.product__item {
+  width: 33.33%;
+  padding-right: 20px;
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.product__img {
+  width: 75px;
+  text-align: center;
+}
+.product__info {
+  width: 270px;
+}
+.product__title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #0067da;
+}
+.product__title:hover,
+.product__title:active {
+  text-decoration: underline;
+}
+.product__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 24px;
+}
+.product__links a {
+  margin-right: 5px;
+}
+.product__links a:hover,
+.product__links a:active {
+  color: #0067da;
+  text-decoration: underline;
+}
+.help {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  background-color: #0067da;
+}
+.help p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.help__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about__info {
+  width: 48%;
+}
+.about__img {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.about__img img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
 }
