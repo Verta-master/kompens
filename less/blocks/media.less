@@ -1,0 +1,347 @@
+@media (max-width: 1230px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header__bottom {
+    position: relative;
+  }
+  .menu__btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/icon-menu-ham.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 19px;
+    background-position: center;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.2);
+  }
+  .menu__item {
+    margin-left: 0;
+  }
+  .menu__link {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .menu--opened {
+    .menu__btn {
+      background-image: url(../img/icons/icon-menu-cross.svg);
+      background-size: 24px 24px;
+    }
+  }
+  .search__input {
+    position: static;
+    width: 150px;
+    opacity: 1;
+    border: 0;
+  }
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid @blue;
+    border-radius: 5px;
+    
+    &:hover {
+      .search__input {
+        width: 150px;
+      }
+    }
+  }
+  .product__info {
+    width: ~"calc(100% - 90px)";
+  }
+  .help p {
+    font-size: 24px;
+  }
+  .warranty__info,
+  .benefits__list {
+    width: ~"calc(100% - 300px)";
+  }
+  .benefits__item {
+    margin-bottom: 40px;
+  }
+  .benefits__item {
+    width: 50%;
+  }
+  .benefits__info {
+    width: ~"calc(100% - 80px)";
+  }
+  .form {
+    width: 270px;
+    padding: 25px;
+  }
+  .form__title {
+    font-size: 24px;
+  }
+  .review__slider {
+    width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news__list {
+    justify-content: space-around;
+  }
+  .footer__top {
+    flex-wrap: wrap;
+    
+    .logo {
+      width: 100%;
+      margin-bottom: 30px;
+      
+      img {
+        width: 220px;
+        height: auto;
+      }
+    }
+  }
+}
+
+//---------------------------------
+@media (max-width: 1022px) {
+  .benefits__item:nth-last-child(2) {
+    margin-bottom: 40px;
+  }
+  .benefits__item {
+    width: 100%;
+  }
+  .benefits__wrap {
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  .benefits__list {
+    padding: 0;
+  }
+  .header__links {
+    display: block;
+    margin-left: 40px;
+  }
+  .header__link {
+    margin-left: 0;
+    padding-left: 40px;
+    
+    &::before {
+      width: 25px;
+      height: 25px;
+      top: 3px;
+    }
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .product__item {
+    width: 50%;
+  }
+  .about__wrap {
+    display: block;
+  }
+  .about__info {
+    width: 100%;
+  }
+  .about__img {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .more {
+    margin-bottom: 20px;
+  }
+  .digits__item span {
+    font-size: 14px;
+  }
+  .warranty__wrap {
+    align-items: flex-start;
+  }
+  .form--bg {
+    margin-top: 120px;
+  }
+  .footer__block,
+  .footer__top .logo {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .footer__top {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+//-----------------------------------
+@media (max-width: 766px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header__wrap {
+    flex-wrap: wrap;
+  }
+  .header__links {
+    margin-left: 0;
+  }
+  .title,
+  h1 {
+    font-size: 36px;
+  }
+  .warranty__info,
+  .news__item,
+  .benefits__list,
+  .product__item {
+    width: 100%;
+  }
+  .help__wrap {
+    display: block;
+    text-align: center;
+    
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+  }
+  .warranty__wrap,
+  .benefits__wrap {
+    display: block;
+  }
+  .benefits__item:last-child {
+    margin-bottom: 40px;
+  }
+  .form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review__slider,
+  .review__slide {
+    width: 470px;
+  }
+  .news__img {
+    width: 170px;
+    height: 220px;
+  }
+  .news__info {
+    width: ~"calc(100% - 170px)";
+    
+    p {
+      font-size: 20px;
+    }
+  }
+  .digits__list {
+    flex-direction: column;
+  }
+  .digits__item {
+    margin-bottom: 30px;
+  }
+  .form--bg {
+    margin-top: 40px;
+  }
+}
+
+//-----------------------------------
+@media (max-width: 480px) {
+  .header__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__btn {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .footer__top .logo,
+  .logo {
+    width: 100%;
+    margin-bottom: 10px;
+
+    img {
+      width: 220px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .footer__top .logo img {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .header__top {
+    order: 2;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 0;
+  }
+  .header__bottom {
+    flex-wrap: wrap;
+    order: 1;
+  }
+  .header__menu {
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .title-top {
+    overflow: hidden;
+  }
+  .review__slide,
+  .review__slider {
+    width: 280px;
+  }
+  .review__slide {
+    padding-left: 25px;
+    
+    &::before {
+      width: 50px;
+      height: 50px;
+      top: 25px;
+      background-size: 30px 30px;
+    }
+  }
+  .review__block {
+    padding: 25px;
+    padding-left: 30px;
+  }
+  .news__link {
+    display: block;
+  }
+  .footer__block,
+  .news__info,
+  .news__img {
+    width: 100%;
+  }
+  .footer__wrap {
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    p {
+      margin: 0;
+    }
+  }
+  .promo,
+  .digits {
+    background-repeat: repeat-y;
+  }
+  .news__img img {
+    width: 100%;
+    height: auto;
+  }
+}
