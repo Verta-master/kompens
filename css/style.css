@@ -943,6 +943,7 @@ blockquote::after {
   list-style: none;
   width: 770px;
   padding-top: 50px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,6 +966,10 @@ blockquote::after {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.benefits__item:nth-last-child(2),
+.benefits__item:last-child {
+  margin-bottom: 0;
+}
 .benefits__icon {
   width: 70px;
   text-align: center;
@@ -979,6 +984,111 @@ blockquote::after {
 }
 .form {
   width: 370px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: #23282c;
   background-color: #fff;
+}
+.form__title {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+.form__field {
+  position: relative;
+  margin-bottom: 15px;
+}
+.form__label {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  font-size: 18px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #0067da;
+}
+.form__input:focus + .form__label {
+  bottom: 30px;
+  font-size: 12px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.form__btn {
+  width: 100%;
+  margin-top: auto;
+}
+.review {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #f4f7fc;
+}
+.review__slider {
+  margin-top: 65px;
+  padding-bottom: 80px;
+}
+.review__slider .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #0067da;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  margin: 0 7px !important;
+  outline: none;
+}
+.review__slider .swiper-pagination-bullet-active {
+  background-color: #0067da;
+}
+.review__slide {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 570px;
+  padding-left: 40px;
+}
+.review__slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #0067da;
+  background-image: url(../img/icons/quote-white.svg);
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center;
+}
+.review__block {
+  padding: 25px 60px;
+  background-color: #fff;
+}
+.review__name {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.review__city {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 14px;
+  line-height: 1.2;
 }
