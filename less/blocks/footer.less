@@ -83,3 +83,49 @@
 .footer__block {
   width: 270px;
 }
+
+.footer__link {
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 35px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255,255,255,0.7);
+  .transition();
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  &--address::before {
+    background-image: url(../img/icons/placeholder.svg);
+  }
+  
+  &--phone::before {
+    background-image: url(../img/icons/phone-call.svg);
+  }
+  
+  &--mail::before {
+    background-image: url(../img/icons/envelope.svg);
+  }
+    
+  &--phone,
+  &--mail {
+    &:hover,
+    &:active {
+      color: #fff;
+      text-decoration: underline;
+      .transition();
+    }
+  }
+}
