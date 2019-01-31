@@ -45,9 +45,11 @@
             </a>
           </li>
         </ul>
-        <a href="#" class="btn header__btn">Заказать звонок</a>
-        <a href="mailto:email@email.com" class="header__link header__link--mail">email@email.com</a>
-        <a href="tel:+71234567890" class="header__link header__link--phone">+7 (123) 456 78 90</a>
+        <a href="#call" class="btn header__btn">Заказать звонок</a>
+        <div class="header__links">
+          <a href="mailto:email@email.com" class="header__link header__link--mail">email@email.com</a>
+          <a href="tel:+71234567890" class="header__link header__link--phone">+7 (123) 456 78 90</a>
+        </div>
       </div>
     </div>
     <div class="header__bottom wrapper">
@@ -84,7 +86,7 @@
   </header>
   
   <main>
-    <section class="promo" style="background-image: url(img/images/bg-4.jpg);" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
+    <section class="promo paroller" style="background-image: url(img/images/bg-4.jpg);">
       <div class="wrapper">
         <h1>Большой выбор компенсаторов</h1>
         <a href="#" class="btn btn--frame">Перейти в каталог</a>
@@ -180,7 +182,7 @@
     <section class="help">
       <div class="wrapper help__wrap">
         <p>Требуется помощь? Свяжитесь с нашим консультантом</p>
-        <a href="#" class="btn btn--white">Заказать звонок</a>
+        <a href="#call" class="btn btn--white">Заказать звонок</a>
       </div>
     </section>
     
@@ -244,7 +246,7 @@
               </div>
             </li>
           </ul>
-          <form action="#" method="post" class="form">
+          <form action="#" method="post" class="form" id="call">
             <p class="form__title">Заказать звонок</p>
             <div class="form__field">
               <input type="text" id="name" class="form__input">
@@ -365,7 +367,7 @@
       </div>
     </section>
     
-    <section class="digits" style="background-image: url(img/images/bg-4.jpg);" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
+    <section class="digits paroller" style="background-image: url(img/images/bg-4.jpg);">
       <div class="wrapper">
         <ul class="digits__list">
           <li class="digits__item">
@@ -482,7 +484,12 @@
   
   <!-- Parallax -->
   <script>
-    $("[data-paroller-factor]").paroller();
+    $(".paroller, [data-paroller-factor]").paroller({
+      factor: 0.3,
+      factorXs: 0,
+      type: 'background',
+      direction: 'vertical',
+    });
   </script>
 </body>
 </html>
