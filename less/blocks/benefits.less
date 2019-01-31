@@ -31,6 +31,7 @@
   list-style: none;
   width: 770px;
   padding-top: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -42,6 +43,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  
+  &:nth-last-child(2),
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .benefits__icon {

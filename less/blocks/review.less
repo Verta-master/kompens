@@ -1,0 +1,67 @@
+.review {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #f4f7fc;
+}
+
+.review__slider {
+  margin-top: 65px;
+  padding-bottom: 80px;
+  
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    border: 1px solid @blue;
+    background-color: rgba(255,255,255,0);
+    opacity: 1;
+    margin: 0 7px !important;
+    outline: none;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: @blue;
+  }
+}
+
+.review__slide {
+  box-sizing: border-box;
+  position: relative;
+  width: 570px;
+  padding-left: 40px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: @blue;
+    background-image: url(../img/icons/quote-white.svg);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: center;
+  }
+}
+
+.review__block {
+  padding: 25px 60px;
+  background-color: #fff;
+}
+
+.review__name {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.review__city {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 14px;
+  line-height: 1.2;
+}

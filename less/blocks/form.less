@@ -1,5 +1,48 @@
 .form {
   width: 370px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   color: #23282c;
   background-color: #fff;
+}
+
+.form__title {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form__label {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  font-size: 18px;
+  .transition();
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid @blue;
+  
+  &:focus {
+    + .form__label {
+      bottom: 30px;
+      font-size: 12px;
+      .transition();
+    }
+  }
+}
+
+.form__btn {
+  width: 100%;
+  margin-top: auto;
 }
