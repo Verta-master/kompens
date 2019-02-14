@@ -1,0 +1,38 @@
+.breadcrumbs {
+  
+}
+
+.breadcrumbs__link {
+  svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    .transition();
+  }
+}
+
+a.breadcrumbs__link {
+  position: relative;
+  .transition();
+  
+  &::after {
+    content: "/";
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    .transition();
+    
+    svg {
+      fill: @blue;
+      .transition();
+    }
+    
+    &::after {
+      color: #fff;
+    }
+  }
+}
