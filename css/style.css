@@ -1115,6 +1115,11 @@ blockquote::after {
 .checkbox:checked + .checkbox__label::after {
   display: block;
 }
+.form__comment {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+}
 .review {
   padding-top: 100px;
   padding-bottom: 80px;
@@ -1989,9 +1994,6 @@ a.pages__link:active {
   .wrapper {
     width: 100%;
   }
-  .header__bottom {
-    position: relative;
-  }
   .menu__btn {
     display: block;
     width: 30px;
@@ -2010,6 +2012,8 @@ a.pages__link:active {
     right: 0;
     background-color: #fff;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 5px 10px 0px #ebf1fb;
+            box-shadow: 0px 5px 10px 0px #ebf1fb;
   }
   .menu__item {
     margin-left: 0;
@@ -2320,18 +2324,18 @@ a.pages__link:active {
     margin-bottom: 30px;
   }
   .header__top {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 0;
   }
   .header__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .header__bottom-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .header__menu {
     width: 100%;
@@ -2344,6 +2348,7 @@ a.pages__link:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 128px;
   }
   h1 {
     font-size: 30px;
