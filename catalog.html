@@ -111,53 +111,57 @@
           </form>
           <form action="#" class="filter">
             <select class="filter__select">
-              <option value="" selected>Ду, мм</option>
+              <option value="" selected disabled>Ду, мм</option>
               <option value="1">Все</option>
               <option value="1">15</option>
               <option value="2">40</option>
               <option value="3">100</option>
             </select>
             <select class="filter__select">
-              <option value="" selected>Ру, бар</option>
+              <option value="" selected disabled>Ру, бар</option>
               <option value="1">Все</option>
               <option value="2">16</option>
               <option value="3">25</option>
             </select>
             <select class="filter__select">
-              <option value="" selected>Способ крепления</option>
+              <option value="" selected disabled>Способ крепления</option>
               <option value="1">Все</option>
               <option value="2">Приварной</option>
               <option value="3">Фланцевый</option>
               <option value="4">Резьбовой</option>
             </select>
             <select class="filter__select">
-              <option value="" selected>Кожух</option>
+              <option value="" selected disabled>Кожух</option>
               <option value="1">Все</option>
               <option value="2">Нет</option>
               <option value="3">Жесткий</option>
               <option value="4">Легкий</option>
             </select>
             <select class="filter__select">
-              <option value="" selected>Изоляция</option>
+              <option value="" selected disabled>Изоляция</option>
               <option value="1">Все</option>
               <option value="2">Без изоляции</option>
               <option value="3">С изоляцией</option>
               <option value="4">Под изоляцию</option>
             </select>
             <select class="filter__select">
-              <option value="" selected>Стандарт</option>
+              <option value="" selected disabled>Стандарт</option>
               <option value="1">Все</option>
               <option value="2">ИЯНШ</option>
             </select>
             <button type="submit" class="btn filter__btn">Подобрать</button>
           </form>
           <div class="sort">
-            <p>Сортировать:</p>
-            <a href="#" class="sort__link">по названию</a>
-            <a href="#" class="sort__link">по цене</a>
-            <a href="#" class="sort__link">по популярности</a>
-            <a href="#" class="sort__btn sort__btn--list" title="Таблица"></a>
-            <a href="#" class="sort__btn sort__btn--tile" title="Плитка"></a>
+            <div class="sort__wrap">
+              <p>Сортировать:</p>
+              <a href="#" class="sort__link sort__link--active">по названию</a>
+              <a href="#" class="sort__link">по цене</a>
+              <a href="#" class="sort__link">по популярности</a>
+            </div>
+            <div class="sort__btns">
+              <a href="#" class="sort__btn sort__btn--list" title="Таблица"></a>
+              <a href="#" class="sort__btn sort__btn--tile" title="Плитка"></a>
+            </div>
           </div>
           <div class="catalog">
             <div class="catalog__table">

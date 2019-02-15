@@ -1,0 +1,75 @@
+.filter-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.filter-search__btn {
+  display: block;
+  width: 60px;
+  height: 48px;
+  background-image: url(../img/icons/magnifying-glass.svg);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-search__input {
+  flex-grow: 1;
+  display: block;
+  height: 48px;
+  
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.filter__select {
+  width: 270px;
+  height: 48px;
+  margin-right: 30px;
+  margin-bottom: 25px;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  appearance: none;
+  background-image: url(../img/icons/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+  background-size: 15px 15px;
+  border-radius: 5px;
+
+  option[disabled] {
+    display: none;
+  }
+  
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  
+  &::-ms-expand {
+    color: rgba(255,255,255,0);
+    border: none;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+.filter__btn {
+  width: 270px;
+  margin-left: auto;
+}
