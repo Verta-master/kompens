@@ -2,6 +2,107 @@
   display: none;
 }
 
+.catalog--list {
+  .catalog__table {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    color: @blue;
+    font-weight: 500;
+    background-color: #fff;
+    
+    p {
+      margin: 0;
+      margin-right: 10px;
+      line-height: 1.2;
+      font-size: 15px;
+      text-align: center;
+      
+      &:first-of-type {
+        width: 230px;
+        margin-right: 20px;
+      }
+      &:nth-of-type(2) {
+        width: 40px;
+      }
+      &:nth-of-type(3) {
+        width: 40px;
+      }
+      &:nth-of-type(4) {
+        width: 100px;
+      }
+      &:nth-of-type(5) {
+        width: 100px;
+      }
+      &:nth-of-type(6) {
+        width: 100px;
+      }
+    }
+  }
+  .catalog__list {
+    display: block;
+  }
+  .catalog__item {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid @blue;
+  }
+  .catalog__info b,
+  .catalog__img {
+    display: none;
+  }
+  .catalog__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 0;
+    padding: 0 20px;
+    font-size: 14px;
+    
+    p {
+      margin-right: 10px;
+      text-align: center;
+      
+      &:first-of-type {
+        width: 40px;
+      }
+      &:nth-of-type(2) {
+        width: 40px;
+      }
+      &:nth-of-type(3) {
+        width: 100px;
+      }
+      &:nth-of-type(4) {
+        width: 100px;
+      }
+      &:nth-of-type(5) {
+        width: 100px;
+        margin-right: 0;
+      }
+    }
+  }
+  .catalog__btn {
+    width: 135px;
+    height: 40px;
+    margin-right: 0;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .catalog__title {
+    width: 230px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
 .catalog__list {
   .reset();
   list-style: none;
@@ -68,9 +169,8 @@
   p {
     margin: 0;
     line-height: 1.2;
-    
-    b {
-      margin-right: 5px;
-    }
+  }
+  b {
+    margin-right: 5px;
   }
 }
