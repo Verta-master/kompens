@@ -277,6 +277,7 @@
           </nav>
         </div>
         <nav class="sidebar">
+          <button type="button" class="sidebar__btn">Каталог &raquo;</button>
           <ul class="sidebar__list">
             <li class="sidebar__item">
               <a href="#" class="sidebar__title">
@@ -435,6 +436,19 @@
       $('.sort__btn').removeClass('sort__btn--active');
       $(this).addClass('sort__btn--active');
     });
+    if (window.innerWidth < 1230) {
+      $('.catalog').removeClass('catalog--list');
+    }
+    if (window.innerWidth < 1022) {
+      $('.sidebar__btn').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.sidebar__list').slideToggle();
+      });
+      $("body").click(function(){
+        $('.sidebar__list').slideUp();
+      });
+    }
   </script>
 </body>
 </html>
