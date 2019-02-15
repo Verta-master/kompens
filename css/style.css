@@ -1686,6 +1686,119 @@ a.breadcrumbs__link:active::after {
 .catalog__table {
   display: none;
 }
+.catalog--list .catalog__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  color: #0067da;
+  font-weight: 500;
+  background-color: #fff;
+}
+.catalog--list .catalog__table p {
+  margin: 0;
+  margin-right: 10px;
+  line-height: 1.2;
+  font-size: 15px;
+  text-align: center;
+}
+.catalog--list .catalog__table p:first-of-type {
+  width: 230px;
+  margin-right: 20px;
+}
+.catalog--list .catalog__table p:nth-of-type(2) {
+  width: 40px;
+}
+.catalog--list .catalog__table p:nth-of-type(3) {
+  width: 40px;
+}
+.catalog--list .catalog__table p:nth-of-type(4) {
+  width: 100px;
+}
+.catalog--list .catalog__table p:nth-of-type(5) {
+  width: 100px;
+}
+.catalog--list .catalog__table p:nth-of-type(6) {
+  width: 100px;
+}
+.catalog--list .catalog__list {
+  display: block;
+}
+.catalog--list .catalog__item {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #0067da;
+}
+.catalog--list .catalog__info b,
+.catalog--list .catalog__img {
+  display: none;
+}
+.catalog--list .catalog__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 0;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.catalog--list .catalog__info p {
+  margin-right: 10px;
+  text-align: center;
+}
+.catalog--list .catalog__info p:first-of-type {
+  width: 40px;
+}
+.catalog--list .catalog__info p:nth-of-type(2) {
+  width: 40px;
+}
+.catalog--list .catalog__info p:nth-of-type(3) {
+  width: 100px;
+}
+.catalog--list .catalog__info p:nth-of-type(4) {
+  width: 100px;
+}
+.catalog--list .catalog__info p:nth-of-type(5) {
+  width: 100px;
+  margin-right: 0;
+}
+.catalog--list .catalog__btn {
+  width: 135px;
+  height: 40px;
+  margin-right: 0;
+  font-weight: 400;
+  font-size: 15px;
+}
+.catalog--list .catalog__title {
+  width: 230px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
 .catalog__list {
   margin: 0;
   padding: 0;
@@ -1763,7 +1876,7 @@ a.breadcrumbs__link:active::after {
   margin: 0;
   line-height: 1.2;
 }
-.catalog__info p b {
+.catalog__info b {
   margin-right: 5px;
 }
 .info {
