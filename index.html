@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
-  <title>Title</title>
+  <title>Kомпенсаторы</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -45,14 +46,16 @@
             </a>
           </li>
         </ul>
-        <a href="#call" class="btn header__btn">Заказать звонок</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="btn header__btn">Заказать звонок</a>
         <div class="header__links">
           <a href="mailto:email@email.com" class="header__link header__link--mail">email@email.com</a>
           <a href="tel:+71234567890" class="header__link header__link--phone">+7 (123) 456 78 90</a>
         </div>
       </div>
     </div>
-    <div class="header__bottom wrapper">
+  </header>
+  <div class="header__bottom">
+    <div class="wrapper header__bottom-wrap">
       <div class="logo">
         <img src="img/images/logo.png" alt="Logo">
       </div>
@@ -83,7 +86,7 @@
         </form>
       </div>
     </div>
-  </header>
+  </div>
   
   <main>
     <section class="promo paroller" style="background-image: url(img/images/bg-4.jpg);">
@@ -182,7 +185,7 @@
     <section class="help">
       <div class="wrapper help__wrap">
         <p>Требуется помощь? Свяжитесь с нашим консультантом</p>
-        <a href="#call" class="btn btn--white">Заказать звонок</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="btn btn--white">Заказать звонок</a>
       </div>
     </section>
     
@@ -246,24 +249,26 @@
               </div>
             </li>
           </ul>
-          <form action="#" method="post" class="form" id="call">
+          <form action="#" method="post" class="form">
             <p class="form__title">Заказать звонок</p>
             <div class="form__field">
-              <input type="text" id="name" class="form__input">
+              <input type="text" id="name" class="form__input" required>
               <label for="name" class="form__label">Имя</label>
             </div>
             <div class="form__field">
-              <input type="email" id="email" class="form__input">
+              <input type="email" id="email" class="form__input" required>
               <label for="email" class="form__label">Email</label>
             </div>
             <div class="form__field">
-              <input type="tel" id="tel" class="form__input">
+              <input type="tel" id="tel" class="form__input" required>
               <label for="tel" class="form__label">Телефон</label>
             </div>
             <div class="form__field">
-              <input type="text" id="message" class="form__input">
+              <textarea id="message" class="form__input" required></textarea>
               <label for="message" class="form__label">Вопрос</label>
             </div>
+            <input type="checkbox" id="check" class="checkbox" required>
+            <label for="check" class="checkbox__label">Я не робот</label>
             <button type="submit" class="btn form__btn">Перезвонить</button>
           </form>
         </div>
@@ -402,21 +407,23 @@
         <form action="#" method="post" class="form form--bg">
           <p class="form__title">Заказать звонок</p>
           <div class="form__field">
-            <input type="text" id="name2" class="form__input">
+            <input type="text" id="name2" class="form__input" required>
             <label for="name2" class="form__label">Имя</label>
           </div>
           <div class="form__field">
-            <input type="email" id="email2" class="form__input">
+            <input type="email" id="email2" class="form__input" required>
             <label for="email2" class="form__label">Email</label>
           </div>
           <div class="form__field">
-            <input type="tel" id="tel2" class="form__input">
+            <input type="tel" id="tel2" class="form__input" required>
             <label for="tel2" class="form__label">Телефон</label>
           </div>
           <div class="form__field">
-            <input type="text" id="message2" class="form__input">
+            <textarea id="message2" class="form__input" required></textarea>
             <label for="message2" class="form__label">Вопрос</label>
           </div>
+          <input type="checkbox" id="check2" class="checkbox" required>
+          <label for="check2" class="checkbox__label">Я не робот</label>
           <button type="submit" class="btn form__btn">Перезвонить</button>
         </form>
       </div>
@@ -462,10 +469,37 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <form action="#" method="post" class="form">
+      <p class="form__title">Оставить заявку</p>
+      <div class="form__field">
+        <input type="text" id="name3" class="form__input" required>
+        <label for="name3" class="form__label">Имя</label>
+      </div>
+      <div class="form__field">
+        <input type="email" id="email3" class="form__input" required>
+        <label for="email3" class="form__label">Email</label>
+      </div>
+      <div class="form__field">
+        <input type="tel" id="tel3" class="form__input" required>
+        <label for="tel3" class="form__label">Телефон</label>
+      </div>
+      <div class="form__field">
+        <textarea id="message3" class="form__input" required></textarea>
+        <label for="message3" class="form__label">Детали заявки</label>
+      </div>
+      <input type="checkbox" id="check3" class="checkbox" required>
+      <label for="check3" class="checkbox__label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Оставить заявку</button>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/jquery.paroller.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
 
   <!-- Slider -->
   <script>

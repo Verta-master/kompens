@@ -53,7 +53,7 @@
   }
 }
 
-.header__bottom,
+.header__bottom-wrap,
 .header__menu {
   display: flex;
   justify-content: space-between;
@@ -63,4 +63,9 @@
 .header__bottom {
   padding-top: 15px;
   padding-bottom: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 1);
 }

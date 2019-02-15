@@ -20,11 +20,13 @@
 
 .form__field {
   position: relative;
+  z-index: 2;
   margin-bottom: 15px;
 }
 
 .form__label {
   position: absolute;
+  z-index: -1;
   bottom: 15px;
   left: 0;
   font-size: 18px;
@@ -45,9 +47,48 @@
       .transition();
     }
   }
+  &:valid:not(:focus) + label {
+    opacity: 0;
+  }
 }
 
 .form__btn {
   width: 100%;
   margin-top: auto;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox__label {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid @blue;
+  }
+  &::after {
+    display: none;
+    content: "\2714";
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    color: @blue;
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+
+.checkbox:checked + .checkbox__label::after {
+  display: block;
 }
