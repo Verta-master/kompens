@@ -1524,6 +1524,9 @@ a.breadcrumbs__link:active::after {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.sidebar__btn {
+  display: none;
+}
 .filter-search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1642,6 +1645,7 @@ a.breadcrumbs__link:active::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 1.2;
 }
 .sort__wrap p {
   margin: 0;
@@ -2044,6 +2048,28 @@ a.pages__link:active {
     width: 220px;
     height: auto;
   }
+  .content {
+    width: 670px;
+  }
+  .catalog__item,
+  .filter__select {
+    margin-right: 0;
+  }
+  .catalog__list,
+  .filter {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .filter__btn {
+    margin-left: 0;
+  }
+  .sort__link,
+  .sort__wrap p {
+    margin-right: 30px;
+  }
+  .sort__btns {
+    display: none;
+  }
 }
 @media (max-width: 1022px) {
   .benefits__item:nth-last-child(2) {
@@ -2118,6 +2144,33 @@ a.pages__link:active {
     padding-top: 50px;
     padding-bottom: 30px;
   }
+  .wrapper--columns {
+    display: block;
+    position: relative;
+  }
+  .content {
+    width: 100%;
+  }
+  .sidebar {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .sidebar__btn {
+    display: block;
+    width: 100%;
+    color: #0067da;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .sidebar__list {
+    display: none;
+  }
 }
 @media (max-width: 766px) {
   .wrapper {
@@ -2186,6 +2239,9 @@ a.pages__link:active {
   }
   .form--bg {
     margin-top: 40px;
+  }
+  .sort__wrap {
+    font-size: 14px;
   }
 }
 @media (max-width: 480px) {
@@ -2297,5 +2353,40 @@ a.pages__link:active {
   .news__img img {
     width: 100%;
     height: auto;
+  }
+  .wrapper--columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 20px;
+  }
+  .sidebar {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .filter__select {
+    width: 100%;
+  }
+  .sort__wrap {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .sort__wrap p {
+    margin-right: 0;
+  }
+  .sort__link {
+    display: block;
+    margin-top: 5px;
+    margin-right: 0;
   }
 }
