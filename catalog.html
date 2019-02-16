@@ -6,6 +6,7 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Kомпенсаторы</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -44,7 +45,7 @@
             </a>
           </li>
         </ul>
-        <a data-fancybox data-src="#call" href="javascript:;" class="btn header__btn">Заказать звонок</a>
+        <a data-fancybox data-src="#call" data-animation-effect="zoom-in-out" href="javascript:;" class="btn header__btn">Заказать звонок</a>
         <div class="header__links">
           <a href="mailto:email@email.com" class="header__link header__link--mail">email@email.com</a>
           <a href="tel:+71234567890" class="header__link header__link--phone">+7 (123) 456 78 90</a>
@@ -112,45 +113,80 @@
             <input type="text" class="filter-search__input" placeholder="Поиск по ключевым словам">
           </form>
           <form action="#" class="filter">
-            <select class="filter__select">
-              <option value="" selected disabled>Ду, мм</option>
-              <option value="1">Все</option>
-              <option value="1">15</option>
-              <option value="2">40</option>
-              <option value="3">100</option>
-            </select>
-            <select class="filter__select">
-              <option value="" selected disabled>Ру, бар</option>
-              <option value="1">Все</option>
-              <option value="2">16</option>
-              <option value="3">25</option>
-            </select>
-            <select class="filter__select">
-              <option value="" selected disabled>Способ крепления</option>
-              <option value="1">Все</option>
-              <option value="2">Приварной</option>
-              <option value="3">Фланцевый</option>
-              <option value="4">Резьбовой</option>
-            </select>
-            <select class="filter__select">
-              <option value="" selected disabled>Кожух</option>
-              <option value="1">Все</option>
-              <option value="2">Нет</option>
-              <option value="3">Жесткий</option>
-              <option value="4">Легкий</option>
-            </select>
-            <select class="filter__select">
-              <option value="" selected disabled>Изоляция</option>
-              <option value="1">Все</option>
-              <option value="2">Без изоляции</option>
-              <option value="3">С изоляцией</option>
-              <option value="4">Под изоляцию</option>
-            </select>
-            <select class="filter__select">
-              <option value="" selected disabled>Стандарт</option>
-              <option value="1">Все</option>
-              <option value="2">ИЯНШ</option>
-            </select>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Ду, мм</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option1" class="checkbox">
+                <label for="option1" class="checkbox__label">15</label>
+                <input type="checkbox" id="option2" class="checkbox">
+                <label for="option2" class="checkbox__label">20</label>
+                <input type="checkbox" id="option3" class="checkbox">
+                <label for="option3" class="checkbox__label">30</label>
+                <input type="checkbox" id="option4" class="checkbox">
+                <label for="option4" class="checkbox__label">40</label>
+                <input type="checkbox" id="option5" class="checkbox">
+                <label for="option5" class="checkbox__label">50</label>
+                <input type="checkbox" id="option6" class="checkbox">
+                <label for="option6" class="checkbox__label">100</label>
+                <input type="checkbox" id="option7" class="checkbox">
+                <label for="option7" class="checkbox__label">120</label>
+                <input type="checkbox" id="option8" class="checkbox">
+                <label for="option8" class="checkbox__label">150</label>
+                <input type="checkbox" id="option9" class="checkbox">
+                <label for="option9" class="checkbox__label">200</label>
+                <input type="checkbox" id="option10" class="checkbox">
+                <label for="option10" class="checkbox__label">250</label>
+              </div>
+            </div>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Ру, бар</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option21" class="checkbox">
+                <label for="option21" class="checkbox__label">16</label>
+                <input type="checkbox" id="option22" class="checkbox">
+                <label for="option22" class="checkbox__label">25</label>
+              </div>
+            </div>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Способ крепления</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option31" class="checkbox">
+                <label for="option31" class="checkbox__label">Приварной</label>
+                <input type="checkbox" id="option32" class="checkbox">
+                <label for="option32" class="checkbox__label">Фланцевый</label>
+                <input type="checkbox" id="option33" class="checkbox">
+                <label for="option33" class="checkbox__label">Резьбовой</label>
+              </div>
+            </div>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Кожух</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option41" class="checkbox">
+                <label for="option41" class="checkbox__label">Нет</label>
+                <input type="checkbox" id="option42" class="checkbox">
+                <label for="option42" class="checkbox__label">Жесткий</label>
+                <input type="checkbox" id="option43" class="checkbox">
+                <label for="option43" class="checkbox__label">Легкий</label>
+              </div>
+            </div>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Изоляция</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option51" class="checkbox">
+                <label for="option51" class="checkbox__label">Без изоляции</label>
+                <input type="checkbox" id="option52" class="checkbox">
+                <label for="option52" class="checkbox__label">С изоляцией</label>
+                <input type="checkbox" id="option53" class="checkbox">
+                <label for="option53" class="checkbox__label">Под изоляцию</label>
+              </div>
+            </div>
+            <div class="filter__field">
+              <button type="button" class="filter__select">Стандарт</button>
+              <div class="filter__options">
+                <input type="checkbox" id="option61" class="checkbox">
+                <label for="option61" class="checkbox__label">ИЯНШ</label>
+              </div>
+            </div>
             <button type="submit" class="btn filter__btn">Подобрать</button>
           </form>
           <div class="sort">
@@ -377,7 +413,7 @@
     <section class="help">
       <div class="wrapper help__wrap">
         <p>Требуется помощь? Свяжитесь с нашим консультантом</p>
-        <a href="#call" class="btn btn--white">Заказать звонок</a>
+        <a data-fancybox data-src="#call" data-animation-effect="zoom-in-out" href="javascript:;" class="btn btn--white">Заказать звонок</a>
       </div>
     </section>
   </main>
@@ -421,8 +457,36 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <form action="#" method="post" class="form">
+      <p class="form__title">Оставить заявку</p>
+      <div class="form__field">
+        <input type="text" id="name3" class="form__input" required>
+        <label for="name3" class="form__label">Имя</label>
+      </div>
+      <div class="form__field">
+        <input type="email" id="email3" class="form__input" required>
+        <label for="email3" class="form__label">Email</label>
+      </div>
+      <div class="form__field">
+        <input type="tel" id="tel3" class="form__input" required>
+        <label for="tel3" class="form__label">Телефон</label>
+      </div>
+      <div class="form__field">
+        <textarea id="message3" class="form__input" required></textarea>
+        <label for="message3" class="form__label">Детали заявки</label>
+      </div>
+      <input type="checkbox" id="check3" class="checkbox" required>
+      <label for="check3" class="checkbox__label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Оставить заявку</button>
+      <p class="form__comment">Отправляя форму, я даю согласие на обработку персональных данных.</p>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   
   <!-- Catalog view switch -->
   <script>
@@ -451,6 +515,13 @@
         $('.sidebar__list').slideUp();
       });
     }
+  </script>
+  
+  <!-- Filter options show/hide -->
+  <script>
+    $('.filter__select').click(function() {
+      $(this).next().slideToggle();
+    });
   </script>
 </body>
 </html>
