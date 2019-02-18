@@ -2005,6 +2005,168 @@ a.pages__link:active {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.card__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 70px;
+  font-size: 18px;
+}
+.card__info {
+  padding: 50px 30px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+          box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+}
+.card__fig {
+  width: 270px;
+}
+.card__about {
+  width: calc(100% - 300px);
+}
+.card__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #0067da;
+}
+.card__parameters {
+  margin-bottom: 30px;
+}
+.card__parameters p {
+  margin: 0;
+  line-height: 30px;
+}
+.card__parameters b {
+  margin-right: 5px;
+}
+.card__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+.card__line b {
+  width: 175px;
+}
+.card__line a {
+  width: calc(100% - 175px);
+  color: #0067da;
+  text-decoration: underline;
+}
+.card__line a:hover,
+.card__line a:active {
+  text-decoration: none;
+}
+.card__line span {
+  width: calc(100% - 175px);
+}
+.card__img {
+  width: 100%;
+  height: 270px;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+.card__img img {
+  display: block;
+  max-height: 100%;
+}
+.card__presence {
+  position: relative;
+  padding-left: 70px;
+  margin: 0;
+}
+.card__presence::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__presence--yes::before {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/tick.svg);
+}
+.card__presence--no::before {
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  background-image: url(../img/icons/cancel.svg);
+}
+.card__hidden {
+  display: none;
+}
+.card__btn {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.related {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.related__wrap {
+  position: relative;
+}
+.related__item {
+  padding: 20px;
+  width: 270px;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+          box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.related__prev,
+.related__next {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/icons/next.svg);
+  background-size: 30px 30px;
+}
+.related__prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: -30px;
+}
+.related__next {
+  right: -30px;
+}
 @media (max-width: 1230px) {
   .wrapper {
     width: 100%;
