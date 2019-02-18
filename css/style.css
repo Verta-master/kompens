@@ -1894,8 +1894,8 @@ a.breadcrumbs__link:active::after {
       -ms-flex-pack: start;
           justify-content: flex-start;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
-          box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  -webkit-box-shadow: 0px 0px 10px 0px #ebf1fb;
+          box-shadow: 0px 0px 10px 0px #ebf1fb;
 }
 .catalog__item:nth-child(3n) {
   margin-right: 0;
@@ -1935,6 +1935,7 @@ a.breadcrumbs__link:active::after {
 .catalog__img img {
   display: block;
   max-height: 100%;
+  width: 100%;
   height: auto;
 }
 .catalog__info {
@@ -2015,14 +2016,14 @@ a.pages__link:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   font-size: 18px;
 }
 .card__info {
   padding: 50px 30px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
-          box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  -webkit-box-shadow: 0px 0px 10px 0px #ebf1fb;
+          box-shadow: 0px 0px 10px 0px #ebf1fb;
 }
 .card__fig {
   width: 270px;
@@ -2032,13 +2033,13 @@ a.pages__link:active {
 }
 .card__title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   font-size: 30px;
   font-weight: 500;
   color: #0067da;
 }
 .card__parameters {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 .card__parameters p {
   margin: 0;
@@ -2057,7 +2058,8 @@ a.pages__link:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  line-height: 1.2;
 }
 .card__line b {
   width: 175px;
@@ -2077,6 +2079,7 @@ a.pages__link:active {
 .card__img {
   width: 100%;
   height: 270px;
+  padding: 20px;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2091,6 +2094,8 @@ a.pages__link:active {
 }
 .card__img img {
   display: block;
+  width: 100%;
+  height: auto;
   max-height: 100%;
 }
 .card__presence {
@@ -2125,12 +2130,70 @@ a.pages__link:active {
   margin-left: auto;
   margin-right: auto;
 }
+.card__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.card__link {
+  display: block;
+  position: relative;
+  color: #0067da;
+  font-size: 16px;
+}
+.card__link:hover,
+.card__link:active {
+  text-decoration: underline;
+}
+.card__link--prev {
+  padding-left: 40px;
+}
+.card__link--prev::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.card__link--next {
+  padding-right: 40px;
+}
+.card__link--next::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .related {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 .related__wrap {
   position: relative;
+}
+.related__slider {
+  padding: 6px;
 }
 .related__item {
   padding: 20px;
@@ -2147,8 +2210,8 @@ a.pages__link:active {
       -ms-flex-pack: start;
           justify-content: flex-start;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
-          box-shadow: 0px 0px 10px 0px rgba(235, 241, 251, 0.004);
+  -webkit-box-shadow: 0px 0px 10px 0px #ebf1fb;
+          box-shadow: 0px 0px 10px 0px #ebf1fb;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2295,6 +2358,19 @@ a.pages__link:active {
   .sort__btns {
     display: none;
   }
+  .related__slider {
+    width: 876px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .related__prev {
+    left: 10px;
+  }
+  .related__next {
+    right: 10px;
+  }
 }
 @media (max-width: 1022px) {
   .benefits__item:nth-last-child(2) {
@@ -2399,6 +2475,12 @@ a.pages__link:active {
   .filter__options .checkbox__label {
     width: 24%;
   }
+  .related__slider {
+    width: 580px;
+  }
+  .card {
+    padding-top: 30px;
+  }
 }
 @media (max-width: 766px) {
   .wrapper {
@@ -2473,6 +2555,24 @@ a.pages__link:active {
   }
   .filter__options .checkbox__label {
     width: 32%;
+  }
+  .card__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .card__about {
+    width: 100%;
+  }
+  .card__fig {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 580px) {
+  .related__slider {
+    width: 290px;
   }
 }
 @media (max-width: 480px) {
@@ -2623,5 +2723,12 @@ a.pages__link:active {
   }
   .filter__options .checkbox__label {
     width: 49%;
+  }
+  .card__link--next {
+    margin-left: auto;
+  }
+  .related {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
