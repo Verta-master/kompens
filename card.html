@@ -140,6 +140,10 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+            <div class="card__links">
+              <a href="#" class="card__link card__link--prev">Предыдущий товар</a>
+              <a href="#" class="card__link card__link--next">Следующий товар</a>
+            </div>
           </section>
         </div>
         <nav class="sidebar">
@@ -409,15 +413,22 @@
       preventClicks: false,
       preventClicksPropagation: false,
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 26,
     });
   </script>
   
-  <!-- Filter options show/hide -->
+  <!-- Catalog -->
   <script>
-    $('.filter__select').click(function() {
-      $(this).next().slideToggle();
-    });
+    if (window.innerWidth < 1022) {
+      $('.sidebar__btn').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.sidebar__list').slideToggle();
+      });
+      $("body").click(function(){
+        $('.sidebar__list').slideUp();
+      });
+    }
   </script>
 </body>
 </html>
