@@ -2225,10 +2225,10 @@ a.pages__link:active {
 .related__prev {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  left: -30px;
+  left: -10px;
 }
 .related__next {
-  right: -30px;
+  right: -10px;
 }
 @media (max-width: 1230px) {
   .wrapper {
