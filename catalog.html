@@ -122,7 +122,7 @@
                 <label for="option2" class="checkbox__label">20</label>
                 <input type="checkbox" id="option3" class="checkbox">
                 <label for="option3" class="checkbox__label">30</label>
-                <input type="checkbox" id="option4" class="checkbox">
+                <input type="checkbox" id="option4" class="checkbox" checked>
                 <label for="option4" class="checkbox__label">40</label>
                 <input type="checkbox" id="option5" class="checkbox">
                 <label for="option5" class="checkbox__label">50</label>
@@ -132,7 +132,7 @@
                 <label for="option7" class="checkbox__label">120</label>
                 <input type="checkbox" id="option8" class="checkbox">
                 <label for="option8" class="checkbox__label">150</label>
-                <input type="checkbox" id="option9" class="checkbox">
+                <input type="checkbox" id="option9" class="checkbox" checked>
                 <label for="option9" class="checkbox__label">200</label>
                 <input type="checkbox" id="option10" class="checkbox">
                 <label for="option10" class="checkbox__label">250</label>
@@ -152,7 +152,7 @@
               <div class="filter__options">
                 <input type="checkbox" id="option31" class="checkbox">
                 <label for="option31" class="checkbox__label">Приварной</label>
-                <input type="checkbox" id="option32" class="checkbox">
+                <input type="checkbox" id="option32" class="checkbox" checked>
                 <label for="option32" class="checkbox__label">Фланцевый</label>
                 <input type="checkbox" id="option33" class="checkbox">
                 <label for="option33" class="checkbox__label">Резьбовой</label>
@@ -522,6 +522,7 @@
     $('.filter__select').click(function() {
       $(this).next().slideToggle();
     });
+    $('.checkbox:checked').parent('.filter__options').slideDown();
   </script>
 </body>
 </html>
